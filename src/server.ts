@@ -6,7 +6,7 @@ import { consumeFromKafka } from './kafka/consumer';
 dotenv.config();
 
 const app: Express = express();
-const port = 7000;
+const port = 8000;
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
