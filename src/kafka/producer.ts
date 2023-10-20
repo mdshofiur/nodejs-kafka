@@ -7,9 +7,10 @@ export async function sendToKafka(res: Response, req: Request) {
   await producer.connect();
 
   const result = await producer.send({
-    topic: "my-topic",
-    messages: [{ value: "testing message" }],
+    topic: "test-topic",
+    messages: [{ value: "Testing Message..." }],
   });
+
   console.log(`Sent successfully! ${JSON.stringify(result)}`);
   res.send(`Sent successfully! ${JSON.stringify(result)}`);
   await producer.disconnect();
